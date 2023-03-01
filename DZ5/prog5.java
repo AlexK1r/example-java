@@ -36,7 +36,7 @@ public class prog5 {
         HashSet<ArrayList<Integer>> temp2 = getAllSet(nums2);  // подмассивов каждого входного массива
         temp2.retainAll(temp1); // находим совпадения 
         int max = 0;
-        for (ArrayList<Integer> item : temp2) { // находим самы большой размер подмассива
+        for (ArrayList<Integer> item : temp2) { // находим самый большой размер подмассива
             if (max < item.size()) {
                 max = item.size();
             }
