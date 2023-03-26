@@ -27,14 +27,14 @@ public class Cat extends BaseCreature {
         this.mood = Math.min(this.mood, 100);
         if (this.mood > 50) {
             if (new Random().nextBoolean()) {
-                this.status = Status.fun;
+                this.status = Status.awake;
             } else {
                 this.status = Status.sleep;
             }
         }
         this.safety -= 20;
         if (this.safety < 20) {
-            this.stage = Status.hungry;
+            this.status = Status.hungry;
             speak("Мяу! Мяяяуууу!");
         }
         if (this.safety <= 0) {
@@ -52,11 +52,11 @@ public class Cat extends BaseCreature {
             System.out.println("Кошка разозлилась и вас оцарапала!");
         }
         if (this.safety > 40) {
-            this.status = Status.fun;
+            this.status = Status.awake;
             speak("Мур-Мур-Мур");
             this.mood += 40;
         } else {
-            this.stage = Status.angry;
+            this.status = Status.angry;
             speak("ШШШШШШШ!!!!");
             this.mood *= 0.7;
         }
@@ -100,7 +100,7 @@ public class Cat extends BaseCreature {
         if (this.status == Status.angry) {
             return;                             //злая кошка не отзывается
         } 
-        if (this.status == Status.sleep) || (this.status == Status.hungry) {
+        if (this.status == Status.sleep) {
             this.status = Status.walks;
         }
         speak();

@@ -3,7 +3,7 @@ package OOP.DZ2;
 /**
  * базовый класс живых существ
  */
-public abstract class BaseCreature implements CreatureAction {
+public abstract class BaseCreature implements CreatureAction{
 
     String name;
     int age;

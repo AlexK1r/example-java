@@ -1,6 +1,6 @@
 package OOP.DZ2;
 
-public class Human extends BaseCreature implements CreatureAction {
+public class Human extends BaseCreature {
 
     public Human(String name, Union union, int age) {
         this.name = name;
@@ -76,6 +76,10 @@ public class Human extends BaseCreature implements CreatureAction {
         cat.reply();                                            //кошка должна ответить
     }
 
+    public void call_dog(BaseCreature dog) {                    //позвать собаку
+        dog.speak();                                            //собака ответила
+    }
+
     @Override
     public void speak() {
         speak("Добрый день!");
@@ -90,15 +94,12 @@ public class Human extends BaseCreature implements CreatureAction {
         speak("Я поел!");
     }
 
-
     public void metabolizm() {
         speak("Я живу!");
     }
 
     @Override
-    public void reaction() {
-
-    }
+    public void reaction() {}
 
     @Override
     public void reply() {

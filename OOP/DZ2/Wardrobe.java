@@ -25,7 +25,7 @@ public class Wardrobe extends BaseItem {
      */
     public void openDoor() {
         isOpenDoors = true;
-        System.out.printf("Двери %s открыли\n", description);
+        System.out.printf("Двери %sа открыли\n", description);
     }
 
     /**
@@ -35,7 +35,7 @@ public class Wardrobe extends BaseItem {
      */
     public void closeDoor() {
         isOpenDoors = false;
-        System.out.printf("Двери %s закрыли\n", description);
+        System.out.printf("Двери %sа закрыли\n", description);
     }
 
     /**
