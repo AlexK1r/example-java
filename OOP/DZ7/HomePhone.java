@@ -6,6 +6,6 @@ public class HomePhone extends Phone implements AnswerCall{
 
     @Override
     public void answerCall() {
-        System.out.println("Входящий вызов. Снимаем трубку.");
+        System.out.println("Звонит домашний телефон. Снимаем трубку.");
     }
 }
